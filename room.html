@@ -235,6 +235,7 @@ function updateChat(){
 }
 function updateSlidePanel(){
   const list=$("spList");if(!list)return;
+  const pb=$("panelBtn");if(pb){const sv=pb.querySelector("svg");pb.textContent=" Slides ("+S.sl.length+")";if(sv)pb.prepend(sv)}
   const sc=(list.clientWidth-16)/960;
   let h="";
   S.sl.forEach((s,i)=>{
